@@ -170,6 +170,26 @@
 
 #define TOUCH_CS 21     // Chip select pin (T_CS) of touch screen
 
+// --- Touch mapping / calibración para XPT2046 ---
+/*
+  Prueba estas opciones para corregir ejes intercambiados / invertidos.
+  Cambia los valores (true/false) según el comportamiento que observes.
+*/
+
+#define TOUCH_SWAP_XY     // Descomentar para intercambiar X <-> Y (si al mover horizontal se mueve vertical)
+#define TOUCH_INVERT_X    // Descomentar si al tocar a la derecha el cursor va a la izquierda
+// #define TOUCH_INVERT_Y  // Descomentar si al tocar abajo el cursor va arriba
+
+// Mapear valores RAW del XPT2046 a pixels. Ajusta si ves recortes o desplazamientos.
+#define TOUCH_MAP_X1  4000  // RAW máximo X (cambia si hace falta)
+#define TOUCH_MAP_X2  100   // RAW mínimo X
+#define TOUCH_MAP_Y1  100   // RAW mínimo Y
+#define TOUCH_MAP_Y2  4000  // RAW máximo Y
+
+// Si el proyecto usa otros nombres, algunas versiones admiten TOUCH_MAP_X/Y u
+// TOUCH_MAP_X1/2 y TOUCH_SWAP_XY como se muestra arriba.
+
+
 //#define TFT_WR 22    // Write strobe for modified Raspberry Pi TFT only
 
 // For the M5Stack module use these #define lines
