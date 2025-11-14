@@ -16,8 +16,12 @@
 // ##################################################################################
 
 // Only define one driver, the other ones must be commented out
-#define ILI9341_DRIVER
-//#define ST7735_DRIVER      // Define additional parameters below for this display
+//#define ILI9341_DRIVER
+#define ST7735_DRIVER      // Define additional parameters below for this display
+
+#define ST7789_VSCRDEF   0x33
+#define ST7789_VSCRSADD  0x37
+
 //#define ILI9163_DRIVER     // Define additional parameters below for this display
 //#define S6D02A1_DRIVER
 //#define RPI_ILI9486_DRIVER // 20MHz maximum SPI
